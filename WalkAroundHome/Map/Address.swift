@@ -12,7 +12,7 @@ import MapKit
 
 
 class Address: NSObject, MKAnnotation {
-	var title: String? = "Дом"
+	var title: String? = Constants.Map.home
 
 	var coordinate: CLLocationCoordinate2D
 

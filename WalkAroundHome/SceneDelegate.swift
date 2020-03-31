@@ -26,13 +26,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let window = UIWindow(windowScene: scene)
 
 		let mainVC = UINavigationController(rootViewController: MainViewController())
-		mainVC.tabBarItem.title = Constants.Texts.mainScreenTitle
+		mainVC.tabBarItem.title = Constants.Main.title
 
 		let listVC = UINavigationController(rootViewController: ListViewController())
-		listVC.tabBarItem.title = Constants.Texts.historyTitle
+		listVC.tabBarItem.title = Constants.List.title
 
 		let mapVC = UINavigationController(rootViewController: MapViewController())
-		mapVC.tabBarItem.title = Constants.Texts.mapTitle
+		mapVC.tabBarItem.title = Constants.Map.title
 
 		let tabBar = TabBarController()
 		tabBar.setViewControllers([mainVC, listVC, mapVC], animated: false)

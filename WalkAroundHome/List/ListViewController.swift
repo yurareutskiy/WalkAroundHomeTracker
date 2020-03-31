@@ -22,7 +22,7 @@ class ListViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		title = Constants.Texts.historyTitle
+		title = Constants.List.title
 		navigationController?.navigationBar.prefersLargeTitles = true
 		view.backgroundColor = .systemBackground
 		setupTable()

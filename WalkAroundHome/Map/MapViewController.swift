@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-	private let regionRadius: CLLocationDistance = 1000
+	private let regionRadius: CLLocationDistance = Constants.Map.regionRadius
 	private var locationStoreManager: LocationStoreManagerProtocol = LocationStoreManager()
 
 	lazy private var mapView: MKMapView = {
@@ -22,7 +22,7 @@ class MapViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		title = Constants.Texts.mapTitle
+		title = Constants.Map.title
 		view.backgroundColor = .systemBackground
 		setupMapView()
 	}
@@ -35,7 +35,7 @@ class MapViewController: UIViewController {
 			let address = Address(coordinate: initialLocation.coordinate)
 			mapView.addAnnotation(address)
 		} else {
-			self.showAlertController(withText: "Ошибка!", message: "Надо сначала установить координаты вашего дома.")
+			showAlertController(withText: Constants.Alert.error, message: Constants.Error.coordinateFirst)
 		}
 	}
 

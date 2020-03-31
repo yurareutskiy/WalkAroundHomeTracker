@@ -90,7 +90,7 @@ class GeolocationManager: NSObject, GeolocationManagerProtocol {
 			return nil
 		}
 
-		let maxDistance = 1.0
+		let maxDistance = 100.0
 		let region = CLCircularRegion(center: center,
 									  radius: maxDistance, identifier: "\(Date().timeIntervalSince1970)")
 		region.notifyOnEntry = false

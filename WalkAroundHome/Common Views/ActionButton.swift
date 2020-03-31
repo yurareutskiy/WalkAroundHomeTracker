@@ -10,17 +10,9 @@ import UIKit
 
 class ActionButton: UIButton {
 
-	private var defaultText: String?
-
 	convenience init(defaultText text: String) {
 		self.init()
-		self.defaultText = text
-	}
-
-	override func layoutSubviews() {
-		super.layoutSubviews()
-
-		setTitle(defaultText, for: .normal)
+		setTitle(text, for: .normal)
 		translatesAutoresizingMaskIntoConstraints = false
 		layer.cornerRadius = 17.0
 		backgroundColor = .systemGray
